@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>尝试实现一个简易require | 守夜人笔记</title>
+    <meta name="description" content="守夜人笔记">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/img/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.f09e5b7a.css" as="style"><link rel="preload" href="/assets/js/app.903983bb.js" as="script"><link rel="preload" href="/assets/js/2.c5c844f9.js" as="script"><link rel="preload" href="/assets/js/15.69ad7253.js" as="script"><link rel="prefetch" href="/assets/js/10.acc61093.js"><link rel="prefetch" href="/assets/js/11.b5b7d313.js"><link rel="prefetch" href="/assets/js/12.044e77b3.js"><link rel="prefetch" href="/assets/js/13.f84ff47d.js"><link rel="prefetch" href="/assets/js/14.4f25373e.js"><link rel="prefetch" href="/assets/js/16.ac264240.js"><link rel="prefetch" href="/assets/js/17.8684da05.js"><link rel="prefetch" href="/assets/js/18.ceef7e7d.js"><link rel="prefetch" href="/assets/js/19.fdccf963.js"><link rel="prefetch" href="/assets/js/20.eea2ef94.js"><link rel="prefetch" href="/assets/js/21.436a904b.js"><link rel="prefetch" href="/assets/js/22.5b0e4632.js"><link rel="prefetch" href="/assets/js/23.456132eb.js"><link rel="prefetch" href="/assets/js/24.0c9dfbdb.js"><link rel="prefetch" href="/assets/js/25.1e46f166.js"><link rel="prefetch" href="/assets/js/26.bc6d72fe.js"><link rel="prefetch" href="/assets/js/27.699fbdd0.js"><link rel="prefetch" href="/assets/js/28.b4423e59.js"><link rel="prefetch" href="/assets/js/3.b94df1a7.js"><link rel="prefetch" href="/assets/js/4.29bcc168.js"><link rel="prefetch" href="/assets/js/5.a332531e.js"><link rel="prefetch" href="/assets/js/6.a34f260f.js"><link rel="prefetch" href="/assets/js/7.b152462c.js"><link rel="prefetch" href="/assets/js/8.6811b85d.js"><link rel="prefetch" href="/assets/js/9.a9a41e29.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f09e5b7a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">守夜人笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  home
+</a></div><div class="nav-item"><a href="/FAQ/" class="nav-link router-link-active">
+  求索
+</a></div><div class="nav-item"><a href="/Thought/" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/StackFei" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub首页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  home
+</a></div><div class="nav-item"><a href="/FAQ/" class="nav-link router-link-active">
+  求索
+</a></div><div class="nav-item"><a href="/Thought/" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/StackFei" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub首页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/FAQ/" class="sidebar-link">📚JS手残</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>花里胡哨必备点</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FAQ/ES/promise.html" class="sidebar-link">🚗promise</a></li><li><a href="/FAQ/ES/react-window.html" class="sidebar-link">🚕长列表</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React中的一些小心得</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FAQ/React/VirtualDom.html" class="sidebar-link">🌰简单的虚拟Dom</a></li><li><a href="/FAQ/React/react-router.html" class="sidebar-link">🍑router</a></li><li><a href="/FAQ/React/context.html" class="sidebar-link">🍇上下文</a></li><li><a href="/FAQ/React/react-redux.html" class="sidebar-link">🍎redux的通讯方式</a></li><li><a href="/FAQ/React/react-redux-middleware.html" class="sidebar-link">🍍简易中间件</a></li><li><a href="/FAQ/React/Hooks.html" class="sidebar-link">🍊Hooks</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vue的一些小笔记</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FAQ/Vue/Cli.html" class="sidebar-link">🔨花里胡哨的cli</a></li><li><a href="/FAQ/Vue/observer.html" class="sidebar-link">🔧乞丐版本MvvM</a></li><li><a href="/FAQ/Vue/Communication.html" class="sidebar-link">🛠️记一次通信方式</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>日常杂玩</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FAQ/Work/TSC.html" class="sidebar-link">🏋️‍♂️TypeScript</a></li><li><a href="/FAQ/Work/cicd.html" class="sidebar-link">🚴持续集成部署（ci/cd）</a></li><li><a href="/FAQ/Work/AOP.html" class="sidebar-link">🏌️‍♂️AOP面向切片编程</a></li><li><a href="/FAQ/Work/WeChat.html" class="sidebar-link">⛹️踩坑React系列小程序</a></li><li><a href="/FAQ/Work/Work1.html" class="sidebar-link">🤾‍♂️前端请求的正确打开方式</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>乱写系列</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FAQ/Node/require.html" class="active sidebar-link">🏀require基操</a></li><li><a href="/FAQ/Node/Koa.html" class="sidebar-link">⚽️初级Koa</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><blockquote><p>require 基于CommonJs规范</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> vm  <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'vm'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">Module</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+Module<span class="token punctuation">.</span>wrap <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;(function(exports,module,require,__dirname,__filename){&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;})&quot;</span>
+<span class="token punctuation">]</span>
+Module<span class="token punctuation">.</span>_extenstions <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'.js'</span><span class="token punctuation">(</span>module<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> content <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>module<span class="token punctuation">.</span>id<span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> contentStr <span class="token operator">=</span> Module<span class="token punctuation">.</span>wrap<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> content <span class="token operator">+</span> Module<span class="token punctuation">.</span>wrap<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+        <span class="token keyword">const</span> fn <span class="token operator">=</span> vm<span class="token punctuation">.</span><span class="token function">runInThisContext</span><span class="token punctuation">(</span>contentStr<span class="token punctuation">)</span>
+        <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'.json'</span><span class="token punctuation">(</span>module<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// console.log(module)</span>
+        <span class="token keyword">const</span> json <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>module<span class="token punctuation">.</span>id<span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        module<span class="token punctuation">.</span>exports <span class="token operator">=</span> json
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">function</span> <span class="token function">tryModuleLoad</span><span class="token punctuation">(</span><span class="token parameter">module</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// console.log(module)</span>
+    <span class="token keyword">const</span> extension <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">extname</span><span class="token punctuation">(</span>module<span class="token punctuation">.</span>id<span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span>
+    Module<span class="token punctuation">.</span>_extenstions<span class="token punctuation">[</span>extension<span class="token punctuation">]</span><span class="token punctuation">(</span>module<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">req</span><span class="token punctuation">(</span><span class="token parameter">modulePath</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> absPathName <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> modulePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> module <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Module</span><span class="token punctuation">(</span>absPathName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">tryModuleLoad</span><span class="token punctuation">(</span>module<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> module<span class="token punctuation">.</span>exports<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// let obj = req('./json.json')</span>
+<span class="token keyword">let</span> js <span class="token operator">=</span> <span class="token function">req</span><span class="token punctuation">(</span><span class="token string">'./js.js'</span><span class="token punctuation">)</span>
+<span class="token comment">// console.log(obj);</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">12/20/2019, 10:57:13 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/FAQ/Work/Work1.html" class="prev">
+        🤾‍♂️前端请求的正确打开方式
+      </a></span> <span class="next"><a href="/FAQ/Node/Koa.html">
+        ⚽️初级Koa
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.903983bb.js" defer></script><script src="/assets/js/2.c5c844f9.js" defer></script><script src="/assets/js/15.69ad7253.js" defer></script>
+  </body>
+</html>

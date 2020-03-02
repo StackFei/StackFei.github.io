@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>手搓一个属于自己的Vue-Cli | 守夜人笔记</title>
+    <meta name="description" content="守夜人笔记">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/img/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.f09e5b7a.css" as="style"><link rel="preload" href="/assets/js/app.903983bb.js" as="script"><link rel="preload" href="/assets/js/2.c5c844f9.js" as="script"><link rel="preload" href="/assets/js/5.a332531e.js" as="script"><link rel="prefetch" href="/assets/js/10.acc61093.js"><link rel="prefetch" href="/assets/js/11.b5b7d313.js"><link rel="prefetch" href="/assets/js/12.044e77b3.js"><link rel="prefetch" href="/assets/js/13.f84ff47d.js"><link rel="prefetch" href="/assets/js/14.4f25373e.js"><link rel="prefetch" href="/assets/js/15.69ad7253.js"><link rel="prefetch" href="/assets/js/16.ac264240.js"><link rel="prefetch" href="/assets/js/17.8684da05.js"><link rel="prefetch" href="/assets/js/18.ceef7e7d.js"><link rel="prefetch" href="/assets/js/19.fdccf963.js"><link rel="prefetch" href="/assets/js/20.eea2ef94.js"><link rel="prefetch" href="/assets/js/21.436a904b.js"><link rel="prefetch" href="/assets/js/22.5b0e4632.js"><link rel="prefetch" href="/assets/js/23.456132eb.js"><link rel="prefetch" href="/assets/js/24.0c9dfbdb.js"><link rel="prefetch" href="/assets/js/25.1e46f166.js"><link rel="prefetch" href="/assets/js/26.bc6d72fe.js"><link rel="prefetch" href="/assets/js/27.699fbdd0.js"><link rel="prefetch" href="/assets/js/28.b4423e59.js"><link rel="prefetch" href="/assets/js/3.b94df1a7.js"><link rel="prefetch" href="/assets/js/4.29bcc168.js"><link rel="prefetch" href="/assets/js/6.a34f260f.js"><link rel="prefetch" href="/assets/js/7.b152462c.js"><link rel="prefetch" href="/assets/js/8.6811b85d.js"><link rel="prefetch" href="/assets/js/9.a9a41e29.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f09e5b7a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">守夜人笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  home
+</a></div><div class="nav-item"><a href="/FAQ/" class="nav-link router-link-active">
+  求索
+</a></div><div class="nav-item"><a href="/Thought/" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/StackFei" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub首页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  home
+</a></div><div class="nav-item"><a href="/FAQ/" class="nav-link router-link-active">
+  求索
+</a></div><div class="nav-item"><a href="/Thought/" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/StackFei" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub首页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/FAQ/" class="sidebar-link">📚JS手残</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>花里胡哨必备点</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FAQ/ES/promise.html" class="sidebar-link">🚗promise</a></li><li><a href="/FAQ/ES/react-window.html" class="sidebar-link">🚕长列表</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React中的一些小心得</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FAQ/React/VirtualDom.html" class="sidebar-link">🌰简单的虚拟Dom</a></li><li><a href="/FAQ/React/react-router.html" class="sidebar-link">🍑router</a></li><li><a href="/FAQ/React/context.html" class="sidebar-link">🍇上下文</a></li><li><a href="/FAQ/React/react-redux.html" class="sidebar-link">🍎redux的通讯方式</a></li><li><a href="/FAQ/React/react-redux-middleware.html" class="sidebar-link">🍍简易中间件</a></li><li><a href="/FAQ/React/Hooks.html" class="sidebar-link">🍊Hooks</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue的一些小笔记</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FAQ/Vue/Cli.html" class="active sidebar-link">🔨花里胡哨的cli</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/FAQ/Vue/Cli.html#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/FAQ/Vue/Cli.html#初始化" class="sidebar-link">初始化</a></li><li class="sidebar-sub-header"><a href="/FAQ/Vue/Cli.html#基本配置文件" class="sidebar-link">基本配置文件</a></li><li class="sidebar-sub-header"><a href="/FAQ/Vue/Cli.html#美化项目界面" class="sidebar-link">美化项目界面</a></li><li class="sidebar-sub-header"><a href="/FAQ/Vue/Cli.html#终端交互反馈" class="sidebar-link">终端交互反馈</a></li><li class="sidebar-sub-header"><a href="/FAQ/Vue/Cli.html#配置下载模板" class="sidebar-link">配置下载模板</a></li></ul></li><li><a href="/FAQ/Vue/observer.html" class="sidebar-link">🔧乞丐版本MvvM</a></li><li><a href="/FAQ/Vue/Communication.html" class="sidebar-link">🛠️记一次通信方式</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>日常杂玩</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FAQ/Work/TSC.html" class="sidebar-link">🏋️‍♂️TypeScript</a></li><li><a href="/FAQ/Work/cicd.html" class="sidebar-link">🚴持续集成部署（ci/cd）</a></li><li><a href="/FAQ/Work/AOP.html" class="sidebar-link">🏌️‍♂️AOP面向切片编程</a></li><li><a href="/FAQ/Work/WeChat.html" class="sidebar-link">⛹️踩坑React系列小程序</a></li><li><a href="/FAQ/Work/Work1.html" class="sidebar-link">🤾‍♂️前端请求的正确打开方式</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>乱写系列</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FAQ/Node/require.html" class="sidebar-link">🏀require基操</a></li><li><a href="/FAQ/Node/Koa.html" class="sidebar-link">⚽️初级Koa</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><blockquote><p>前端世界，框架横行。各种基于脚手架的工程化开发，大行其道。以前面试，不会框架算得上的耻辱。现如今，不会脚手架，也总感觉缺点啥。
+较为成熟的脚手架比如Vue的 <code>Vue-Cli</code>, React的 <code>create-react-app</code>, ReactNative的 <code>react-native-cli</code> ，这些算的上是业界较为成熟的脚手架</p></blockquote> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>今天咱们就尝试手搓一个自己的乞丐版cli，算的上是一个小技巧吧。每次只知道用其他的脚手架，运行，然后就能跑项目，咱也不知道内部发生了啥。
+前置知识，得懂一点 <code>Node</code>, <code>shell</code> 命令，不然也挺模糊的。</p> <h2 id="初始化"><a href="#初始化" class="header-anchor">#</a> 初始化</h2> <p>初始化一个项目结构先。接下来配置 <code>package.json</code> 配置文件。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>── myCli
+   ├── bin<span class="token comment">// 存放配置文件    </span>
+   <span class="token operator">|</span>    ├── my 
+   <span class="token operator">|</span>    └── <span class="token keyword">package</span><span class="token punctuation">.</span>json 
+   └── <span class="token keyword">package</span><span class="token punctuation">.</span>json    <span class="token comment">// 初始化的配置文件</span>
+
+<span class="token comment">// package.json</span>
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;bin&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;my&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./bin/my&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;keywords&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;license&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ISC&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// my</span>
+#<span class="token operator">!</span><span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>env node
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'属于自己的脚手架'</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="基本配置文件"><a href="#基本配置文件" class="header-anchor">#</a> 基本配置文件</h2> <p>配置文件也是有讲究的，配置 <code>bin</code> 目录文件夹,自定义一条命令 <code>my</code> ，找到 <code>bin</code>目录下的文件 <code>my</code>, 当然这些都是指令已经文件名都是自己自定义的，绝对，绝对，绝对不能再配置文件中使用注释!
+就绪之后，需要将自己的包 <code>link</code> 到全局环境中， 使用 <code>npm link</code> 会将命令发布到全局作用域，Mac 无法link的话 使用 <code>sudo</code>，一切就绪，回到命令行执行。</p> <p><img src="/assets/img/vue1.efac19b4.gif" alt="属于自己的cli"></p> <p>效果还是比较显著的，有没有一种自豪感，反正当时小编有一股慢慢的自豪感。当然如果你也想给其他人使用，在执行 <code>npm login</code> 上传到全局npm，然后别人执行 <code>npm install -g xxxx</code> ，就可以下载你设置的包来使用。
+但是仅仅只是一条命令，总感觉缺点啥，得来点实用的。是干就干。回到自己的配置文件。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// my</span>
+<span class="token keyword">const</span> program <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'commander'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+program<span class="token punctuation">.</span><span class="token function">version</span><span class="token punctuation">(</span><span class="token string">&quot;6.6.6&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;-v, --version&quot;</span><span class="token punctuation">)</span>
+program<span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">&quot;init&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;🔥&quot;</span><span class="token punctuation">)</span>
+program<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+</code></pre></div><p>稍作解释，<code>commander</code> 属于沟通shell命令的包，<code>version</code> 版本信息，<code>command</code> 便是和用户交互的信息，<code>parse</code> 将命令push到进程中,这些都是固定的写法，不太理解的得去<code>npm</code>好好研究一下了。看效果。</p> <p><img src="/assets/img/vue2.aa62f5e0.gif" alt="属于自己的cli"></p> <h2 id="美化项目界面"><a href="#美化项目界面" class="header-anchor">#</a> 美化项目界面</h2> <p>效果出来了，有点东西，但优秀的前端不止于此，有点嗑馋，上不了牌面，既然如此，咱给他美化美化呗。稍作改造。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 普通字</span>
+<span class="token keyword">const</span> Printer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@darkobits/lolcatjs'</span><span class="token punctuation">)</span>
+program<span class="token punctuation">.</span><span class="token function">version</span><span class="token punctuation">(</span>Printer<span class="token punctuation">.</span>default<span class="token punctuation">.</span><span class="token function">fromString</span><span class="token punctuation">(</span><span class="token string">&quot;打造最强cli&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">&quot;-v, --version&quot;</span><span class="token punctuation">)</span>
+
+<span class="token comment">//花里胡哨</span>
+<span class="token keyword">const</span> my <span class="token operator">=</span> <span class="token punctuation">[</span>
+<span class="token string">&quot;              **   **&quot;</span> <span class="token punctuation">,</span>
+<span class="token string">&quot; **********  //** ** &quot;</span> <span class="token punctuation">,</span>
+<span class="token string">&quot;//**//**//**  //***  &quot;</span> <span class="token punctuation">,</span>
+<span class="token string">&quot; /** /** /**   /**  &quot;</span>  <span class="token punctuation">,</span> 
+<span class="token string">&quot; /** /** /**   **    &quot;</span> <span class="token punctuation">,</span>
+<span class="token string">&quot; *** /** /**  **   &quot;</span>   <span class="token punctuation">,</span>
+<span class="token string">&quot;///  //  //  // &quot;</span>      <span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">&quot;\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+program<span class="token punctuation">.</span><span class="token function">version</span><span class="token punctuation">(</span>Printer<span class="token punctuation">.</span>default<span class="token punctuation">.</span><span class="token function">fromString</span><span class="token punctuation">(</span>my<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">&quot;-v, --version&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><p><code>@darkobits/lolcatjs</code>负责将输出的终端命令变成渐变色，哎，光显示字，可不是咱的风格，要来就要来点骚操作。</p> <p><img src="/assets/img/vue3.dfd776af.gif" alt="属于自己的cli"> <img src="/assets/img/vue4.01f1faac.gif" alt="属于自己的cli"></p> <h2 id="终端交互反馈"><a href="#终端交互反馈" class="header-anchor">#</a> 终端交互反馈</h2> <p>脚手架只有这种花里胡哨的当然也不行，得和用户交互啊，接下来就是和用户交互，用户输入指定信息，这边作出反馈。回到配置文件。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 终端与用户对话</span>
+<span class="token keyword">const</span> chalk <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'chalk'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 前端shell</span>
+<span class="token keyword">const</span> shelljs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'shelljs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> binParams <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'🍌'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+program
+    <span class="token punctuation">.</span><span class="token function">usage</span><span class="token punctuation">(</span><span class="token string">&quot;[cmd] &lt;options&gt;&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">arguments</span><span class="token punctuation">(</span><span class="token string">&quot;&lt;cmd&gt; [env]&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">cmd <span class="token punctuation">,</span> otherParams</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> handler <span class="token operator">=</span> binParams<span class="token punctuation">[</span>cmd<span class="token punctuation">]</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> handler <span class="token operator">===</span> <span class="token string">&quot;undefined&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>chalk<span class="token punctuation">.</span><span class="token function">yellow</span><span class="token punctuation">(</span><span class="token string">&quot;️ ⚠️ 🚧 &quot;</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">sorry [</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>chalk<span class="token punctuation">.</span><span class="token function">red</span><span class="token punctuation">(</span>cmd<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">] It's not defined 👽</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            <span class="token function">handler</span><span class="token punctuation">(</span>otherParams<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><code>shelljs</code> 专注于与终端交互, <code>chalk</code> 接受用户的指令，并返回指令信息,<code>binParams</code> 存储所有的指令信息，对话时也要对参数进行校验，用户退出时
+得使用<code>process.exit(1)</code> 安全退出，没有相关指令，也可以向用户返回温馨提示信息。当然途中会存在一些⚠警告，后续也会处理掉。</p> <p><img src="/assets/img/vue5.fd337768.gif" alt="属于自己的cli"></p> <p>基本的用户界面已经处理好了，但脚手架存在的目的就是下载项目架构，目的是下载，下载前得选择各种环境、状态、以及使用语言。捣鼓起来</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> inquirer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'inquirer'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> binParams <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        inquirer
+            <span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    type<span class="token operator">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+                    message<span class="token operator">:</span> <span class="token string">&quot;请选择输入项目名称&quot;</span><span class="token punctuation">,</span>
+                    name<span class="token operator">:</span><span class="token string">&quot;dirname&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    type<span class="token operator">:</span> <span class="token string">&quot;list&quot;</span><span class="token punctuation">,</span>
+                    message<span class="token operator">:</span> <span class="token string">&quot;请选择需要使用的语言&quot;</span><span class="token punctuation">,</span>
+                    choices<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;➤JavaScript&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;➤TypeScript&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    name<span class="token operator">:</span><span class="token string">&quot;kind&quot;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">answers</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token comment">// any wer</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>inquirer</code>专门和用户对话的资源包，这结构看起来不陌生吧，每次构建项目时，这都是必选项，但目前也只是一次性操作，并不能完全选择。
+这些其实没啥好纠结的，全是固定的包，固定的使用方法。先前看到的命令行有一条警告报错，其实只是警告命令，如果有强迫症可以将之前写的 <code>program.command(&quot;init&quot;,&quot;🔥&quot;);</code> 注释掉即可。然后配合上一些特殊字符会显得更加人性化。<code>then</code> 中也是用户输入后的所有反馈信息</p> <p><img src="/assets/img/vue6.5c98f358.gif" alt="属于自己的cli"></p> <p>选择模块既然得到了解决，下一步就是下载模块，下载之前，或者是下载中都得给用户提供下载体感，又到了装包的时刻。<code>ora</code> 一个简单的 <code>loading</code> 状态。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> ora <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'ora'</span><span class="token punctuation">)</span>
+ <span class="token operator">...</span>
+<span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">answers</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> _dirname <span class="token operator">=</span> answers<span class="token punctuation">.</span>dirname<span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>_dirname<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">const</span> spinner <span class="token operator">=</span> <span class="token function">ora</span><span class="token punctuation">(</span><span class="token string">&quot;🚀 最强cli玩命加载中...&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        spinner<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="/assets/img/vue7.087ebb83.gif" alt="属于自己的cli"></p> <p>看起来像那么回事，接下来就是下载模板的时候。</p> <h2 id="配置下载模板"><a href="#配置下载模板" class="header-anchor">#</a> 配置下载模板</h2> <p>终于到了能下载模板的时候。首先你得准别一套模板 <code>template</code>，其次得有一个下载工具 <code>download</code> 当然如果够格可以自己写一套，这里就随便找了一套代码
+然后下载模板得有一个下载目的地路径，此处默认用第三方包<code>user-home</code> 找到用户的根目录，<code>shelljs</code>此时的作用至关重要，全靠它才能操作到用户的目录。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> download <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'download'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> userHome <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'user-home'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> template <span class="token operator">=</span> <span class="token string">&quot;direct:https://github.com/StackFei/Promises.git&quot;</span>
+<span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">answers</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>_dirname<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token operator">...</span>
+        <span class="token operator">...</span>
+        <span class="token keyword">const</span> __project <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>userHome<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/Desktop/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>_dirname<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+        shelljs<span class="token punctuation">.</span><span class="token function">cd</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>userHome<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/Desktop/</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        shelljs<span class="token punctuation">.</span><span class="token function">rm</span><span class="token punctuation">(</span><span class="token string">'-rf'</span><span class="token punctuation">,</span>__project<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        shelljs<span class="token punctuation">.</span><span class="token function">mkdir</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">download</span><span class="token punctuation">(</span>template<span class="token punctuation">,</span>__project<span class="token punctuation">,</span><span class="token punctuation">{</span>clone<span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            spinner<span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//后续下载成功的操作</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>不出意外，一个崭新的属于自己的模板的cli就这么横空出世了。说简单不简单，说难不难。学会了也算是自己的一个小技巧吧。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">12/4/2019, 12:43:57 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/FAQ/React/Hooks.html" class="prev">
+        🍊Hooks
+      </a></span> <span class="next"><a href="/FAQ/Vue/observer.html">
+        🔧乞丐版本MvvM
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.903983bb.js" defer></script><script src="/assets/js/2.c5c844f9.js" defer></script><script src="/assets/js/5.a332531e.js" defer></script>
+  </body>
+</html>
